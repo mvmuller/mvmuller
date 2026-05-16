@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Artistic Practice · María Valentina Müller Araya</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .work {
+      padding: 2.25rem 0;
+    }
+
+    .work-divider {
+      height: 1px;
+      background: var(--border);
+    }
+
+    .work-meta {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 0.4rem;
+      flex-wrap: wrap;
+    }
+
+    .work-year {
+      font-size: 0.8rem;
+      color: var(--text-soft);
+      letter-spacing: 0.04em;
+    }
+
+    .work-medium {
+      font-size: 0.75rem;
+      color: var(--accent);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: #f5efe3;
+      padding: 0.1rem 0.5rem;
+      border-radius: 2px;
+    }
+
+    .work h3 {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 400;
+      margin-bottom: 0.75rem;
+      font-style: italic;
+    }
+
+    .work-desc {
+      font-size: 0.94rem;
+      color: var(--text-mid);
+      max-width: 580px;
+      margin-bottom: 1.1rem;
+    }
+
+    .exhibitions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .exhibition {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 1rem;
+      font-size: 0.88rem;
+    }
+
+    .exhibition-year {
+      color: var(--text-soft);
+      font-size: 0.8rem;
+      padding-top: 0.05rem;
+    }
+
+    .exhibition-info strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .exhibition-info span {
+      color: var(--text-soft);
+      font-style: italic;
+    }
+
+    .exhibition-venue {
+      color: var(--text-mid);
+    }
+
+    .work img {
+      width: 100%;
+      margin-top: 1.25rem;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html" class="nav-name">María Valentina Müller Araya</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="works.html" class="active">Artistic Practice</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="cv/CV_MariaValentinaMuller_EN.pdf" target="_blank">CV</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-layout">
+
+    <h2 class="page-title">Artistic Practice</h2>
+    <p class="page-intro">
+      Works at the intersection of printmaking, editorial, and visual art —
+      exhibited at institutions in Chile and the United States.
+    </p>
+
+    <div class="projects">
+
+      <!-- LIBRETA CONSTITUYENTE -->
+      <article class="work">
+        <div class="work-meta">
+          <span class="work-year">2019–2020</span>
+          <span class="work-medium">Zine · Print</span>
+        </div>
+        <h3>Libreta Constituyente</h3>
+        <p class="work-desc">
+          Zine published under the series <em>Because It's Not Fun</em>.
+          A visual and editorial response to the Chilean constitutional process,
+          exhibited in group and individual shows across Santiago.
+        </p>
+        <div class="exhibitions">
+          <div class="exhibition">
+            <span class="exhibition-year">2020</span>
+            <div class="exhibition-info">
+              <span class="exhibition-venue">Museo de Arte Contemporáneo, Chile</span><br>
+              <span>Group Exhibition — <em>Colección Contingencia</em></span>
+            </div>
+          </div>
+          <div class="exhibition">
+            <span class="exhibition-year">2020</span>
+            <div class="exhibition-info">
+              <span class="exhibition-venue">Isabel Croxatto Galería, Chile</span><br>
+              <span>Group Exhibition — <em>El Mundo al Instante N° 1</em></span>
+            </div>
+          </div>
+          <div class="exhibition">
+            <span class="exhibition-year">2019</span>
+            <div class="exhibition-info">
+              <span class="exhibition-venue">Museo de Arte Contemporáneo, Chile</span><br>
+              <span>Group Exhibition — <em>Colección Contingencia</em></span>
+            </div>
+          </div>
+          <div class="exhibition">
+            <span class="exhibition-year">2019</span>
+            <div class="exhibition-info">
+              <span class="exhibition-venue">Isabel Croxatto Galería, Chile</span><br>
+              <span>Group Exhibition — <em>El Mundo al Instante N° 1</em></span>
+            </div>
+          </div>
+          <div class="exhibition">
+            <span class="exhibition-year">2019</span>
+            <div class="exhibition-info">
+              <span class="exhibition-venue">Biblioteca Viva, Chile</span><br>
+              <span>Individual Exhibition — <em>Libreta Constituyente</em></span>
+            </div>
+          </div>
+        </div>
+        <!-- Add image: <img src="images/libreta-constituyente.jpg" alt="Libreta Constituyente"> -->
+      </article>
+
+      <div class="work-divider"></div>
+
+      <!-- VERBORREA -->
+      <article class="work">
+        <div class="work-meta">
+          <span class="work-year">2019</span>
+          <span class="work-medium">Print</span>
+        </div>
+        <h3>Verborrea</h3>
+        <p class="work-desc">
+          Printmaking work presented as part of the international group exhibition
+          <em>Imprimir es Resistir</em> (Print is Resistance), shown in the United States.
+        </p>
+        <div class="exhibitions">
+          <div class="exhibition">
+            <span class="exhibition-year">2019</span>
+            <div class="exhibition-info">
+              <span class="exhibition-venue">Group Exhibition — <em>Imprimir es Resistir</em></span><br>
+              <span>United States</span>
+            </div>
+          </div>
+        </div>
+        <!-- Add image: <img src="images/verborrea.jpg" alt="Verborrea"> -->
+      </article>
+
+      <div class="work-divider"></div>
+
+      <!-- SEGÚN EL FAVOR DEL VIENTO -->
+      <article class="work">
+        <div class="work-meta">
+          <span class="work-year">2017</span>
+          <span class="work-medium">Print · Installation</span>
+        </div>
+        <h3>Según el favor del viento</h3>
+        <p class="work-desc">
+          Work presented in <em>100 volantines para Violeta</em>, a group exhibition
+          curated by artist Hugo Rivera-Scott as a tribute to Violeta Parra.
+        </p>
+        <div class="exhibitions">
+          <div class="exhibition">
+            <span class="exhibition-year">2017</span>
+            <div class="exhibition-info">
+              <span class="exhibition-venue">Foro de las Artes, Chile</span><br>
+              <span>Group Exhibition — <em>100 volantines para Violeta</em></span><br>
+              <span>Curated by Hugo Rivera-Scott</span>
+            </div>
+          </div>
+        </div>
+        <!-- Add image: <img src="images/segun-el-favor.jpg" alt="Según el favor del viento"> -->
+      </article>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <p>Santiago, Chile · <a href="mailto:mvmuller@proton.me">mvmuller@proton.me</a></p>
+  </footer>
+
+</body>
+</html>

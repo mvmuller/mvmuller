@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio PDF · María Valentina Müller Araya</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .pdf-wrapper {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2.5rem 2rem 4rem;
+      flex: 1;
+    }
+
+    .pdf-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .pdf-title-block .page-title { margin-bottom: 0.25rem; }
+
+    .pdf-download {
+      font-size: 0.85rem;
+      color: var(--text-soft);
+      border: 1px solid var(--border);
+      padding: 0.4rem 1rem;
+      border-radius: 2px;
+      white-space: nowrap;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .pdf-download:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .pdf-viewer {
+      width: 100%;
+      height: 80vh;
+      border: 1px solid var(--border);
+      background: #f0ede8;
+      display: block;
+    }
+
+    .pdf-fallback {
+      display: none;
+      padding: 3rem 2rem;
+      text-align: center;
+      border: 1px solid var(--border);
+      background: #f9f8f6;
+    }
+
+    .pdf-fallback p {
+      font-size: 0.95rem;
+      color: var(--text-soft);
+      margin-bottom: 1rem;
+    }
+
+    .pdf-fallback a {
+      font-size: 0.875rem;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      padding: 0.5rem 1.25rem;
+      border-radius: 2px;
+    }
+    .pdf-fallback a:hover {
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+    }
+
+    /* If iframe fails to load, show fallback */
+    .pdf-viewer.error { display: none; }
+    .pdf-viewer.error + .pdf-fallback { display: block; }
+
+    @media (max-width: 640px) {
+      .pdf-wrapper { padding: 2rem 1.25rem; }
+      .pdf-viewer { height: 65vh; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html" class="nav-name">María Valentina Müller Araya</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="works.html">Artistic Practice</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="cv/CV_MariaValentinaMuller_EN.pdf" target="_blank">CV</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="pdf-wrapper">
+
+    <div class="pdf-header">
+      <div class="pdf-title-block">
+        <h2 class="page-title">Portfolio</h2>
+        <p class="page-intro" style="margin-bottom:0">Information Design · Data Visualization</p>
+      </div>
+      <a href="portfolio/portfolio.pdf" download class="pdf-download">↓ Download PDF</a>
+    </div>
+
+    <iframe
+      class="pdf-viewer"
+      src="portfolio/portfolio.pdf"
+      title="Portfolio PDF"
+      id="pdfFrame"
+    ></iframe>
+
+    <div class="pdf-fallback">
+      <p>Your browser could not display the PDF directly.</p>
+      <a href="portfolio/portfolio.pdf" download>Download Portfolio PDF</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>Santiago, Chile · <a href="mailto:mvmuller@proton.me">mvmuller@proton.me</a></p>
+  </footer>
+
+  <script>
+    // If iframe fails, show fallback message
+    const frame = document.getElementById('pdfFrame');
+    frame.addEventListener('error', function() {
+      frame.classList.add('error');
+    });
+  </script>
+
+</body>
+</html>
