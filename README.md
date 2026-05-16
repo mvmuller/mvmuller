@@ -1,4 +1,4 @@
-# María Valentina Müller 
+# María Müller 
 
 Personal portfolio site built with plain HTML/CSS. No frameworks, no dependencies.
 
