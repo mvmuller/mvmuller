@@ -3,16 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio · María Valentina Müller Araya</title>
+  <title>Portfolio · María Müller</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .pdf-wrapper {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2.5rem 2rem 4rem;
+      flex: 1;
+    }
+    .pdf-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .pdf-download {
+      font-size: 0.85rem;
+      color: var(--text-soft);
+      border: 1px solid var(--border);
+      padding: 0.4rem 1rem;
+      border-radius: 2px;
+      white-space: nowrap;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .pdf-download:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .pdf-viewer {
+      width: 100%;
+      height: 82vh;
+      border: 1px solid var(--border);
+      background: #f0ede8;
+      display: block;
+    }
+    .pdf-fallback {
+      display: none;
+      padding: 3rem 2rem;
+      text-align: center;
+      border: 1px solid var(--border);
+      background: #f9f8f6;
+    }
+    .pdf-fallback p {
+      font-size: 0.95rem;
+      color: var(--text-soft);
+      margin-bottom: 1rem;
+    }
+    .pdf-fallback a {
+      font-size: 0.875rem;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      padding: 0.5rem 1.25rem;
+      border-radius: 2px;
+    }
+    @media (max-width: 640px) {
+      .pdf-wrapper { padding: 2rem 1.25rem; }
+      .pdf-viewer { height: 65vh; }
+    }
+  </style>
 </head>
 <body>
 
   <header>
     <nav>
-      <a href="index.html" class="nav-name">María Valentina Müller Araya</a>
+      <a href="index.html" class="nav-name">María Müller</a>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="portfolio.html" class="active">Portfolio</a></li>
@@ -23,103 +83,38 @@
     </nav>
   </header>
 
-  <main class="page-layout">
+  <main class="pdf-wrapper">
+    <div class="pdf-header">
+      <div>
+        <h2 class="page-title">Portfolio</h2>
+        <p class="page-intro" style="margin-bottom:0">Information Design · Data Visualization</p>
+      </div>
+      <a href="portfolio/portfolio.pdf" download class="pdf-download">↓ Download</a>
+    </div>
 
-    <h2 class="page-title">Portfolio</h2>
-    <p class="page-intro">Selected projects in information design, data visualization, and scientific communication.</p>
+    <iframe
+      class="pdf-viewer"
+      src="portfolio/portfolio.pdf"
+      title="Portfolio PDF"
+      id="pdfFrame"
+    ></iframe>
 
-    <div class="projects">
-
-      <article class="project">
-        <div class="project-meta">
-          <span class="project-year">2024–2025</span>
-          <span class="project-tag">Data Visualization · GIS</span>
-        </div>
-        <h3>Disaster Risk Atlas of Chile</h3>
-        <p class="project-client">CIGIDEN – Pontificia Universidad Católica de Chile</p>
-        <p class="project-desc">
-          Lead information designer for the first edition of Chile's national disaster risk atlas,
-          commissioned by Dr. Magdalena Vicuña, Dean of Architecture at PUC. Responsible for all
-          geospatial data visualizations (QGis / ArcGis) and editorial design. Translated complex
-          multi-variable seismic and climate risk data into maps and infographics accessible to
-          policy-makers and the general public.
-        </p>
-        <div class="project-tools">QGis · ArcGis · Illustrator · InDesign</div>
-        <!-- Add project image: <img src="images/atlas.jpg" alt="Disaster Risk Atlas"> -->
-      </article>
-
-      <div class="project-divider"></div>
-
-      <article class="project">
-        <div class="project-meta">
-          <span class="project-year">2025–Present</span>
-          <span class="project-tag">Medical Infographics</span>
-        </div>
-        <h3>Muerte Encefálica — 2nd Edition</h3>
-        <p class="project-client">Hospital Barros Luco · Universidad de Chile, Faculty of Medicine</p>
-        <p class="project-desc">
-          Information visualization for the second edition of a medical reference book on brain death,
-          in collaboration with Dr. David Sáez Méndez, Head of Neurology at Barros Luco Hospital.
-          Translating clinical and statistical content into accessible infographics for medical audiences.
-        </p>
-        <div class="project-tools">Illustrator · InDesign · Figma</div>
-      </article>
-
-      <div class="project-divider"></div>
-
-      <article class="project">
-        <div class="project-meta">
-          <span class="project-year">2023</span>
-          <span class="project-tag">Visual Communication</span>
-        </div>
-        <h3>Antü Energía — Renewable Energy Communication</h3>
-        <p class="project-client">Antü Energía</p>
-        <p class="project-desc">
-          On-site multimedia content production across remote locations in Northern and Southern Chile.
-          Translated complex engineering processes in renewable energy into accessible visual narratives
-          for social media and institutional communication.
-        </p>
-        <div class="project-tools">Illustrator · Photoshop · Premiere · After Effects</div>
-      </article>
-
-      <div class="project-divider"></div>
-
-      <article class="project">
-        <div class="project-meta">
-          <span class="project-year">2023</span>
-          <span class="project-tag">Exhibition Design</span>
-        </div>
-        <h3>Retorno a las Grandes Alamedas</h3>
-        <p class="project-client">Museo de la Memoria y los DDHH Chile</p>
-        <p class="project-desc">
-          Technical management and installation of the large-scale exhibition marking the 50th
-          anniversary of the Chilean coup d'état, displayed on the central esplanade of the museum.
-        </p>
-        <div class="project-tools">Exhibition production · Large-scale installation</div>
-      </article>
-
-      <div class="project-divider"></div>
-
-      <article class="project">
-        <div class="project-meta">
-          <span class="project-year">2019–Present</span>
-          <span class="project-tag">Branding · Editorial</span>
-        </div>
-        <h3>Estudio NO — Freelance Practice</h3>
-        <p class="project-client">Various clients</p>
-        <p class="project-desc">
-          Independent design practice developing visual solutions integrating branding and information
-          design. Clients include Fundación NiñasPro, Librería Flach, Cartograph, and Hospital del Profesor.
-        </p>
-        <div class="project-tools">Figma · Illustrator · InDesign</div>
-      </article>
-
+    <div class="pdf-fallback">
+      <p>Your browser could not display the PDF directly.</p>
+      <a href="portfolio/portfolio.pdf" download>Download Portfolio PDF</a>
     </div>
   </main>
 
   <footer>
     <p>Santiago, Chile · <a href="mailto:mvmuller@proton.me">mvmuller@proton.me</a></p>
   </footer>
+
+  <script>
+    document.getElementById('pdfFrame').addEventListener('error', function() {
+      this.style.display = 'none';
+      document.querySelector('.pdf-fallback').style.display = 'block';
+    });
+  </script>
 
 </body>
 </html>
