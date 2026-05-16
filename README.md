@@ -1,4 +1,4 @@
-# María Valentina Müller Araya — Portfolio Site
+# María Valentina Müller 
 
 Personal portfolio site built with plain HTML/CSS. No frameworks, no dependencies.
 
